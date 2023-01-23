@@ -1,66 +1,136 @@
----
-layout: default
----
+<!-- -&#45;&#45;-->
+<!--layout: default-->
+<!-- -&#45;&#45;-->
 
-<!-- Page Header -->
-{% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-  {% else %}
-  <header class="masthead">
-    {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>{{ site.title }}</h1>
-            {% if site.description %}
-            <span class="subheading">{{ site.description }}</span>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+<!--&lt;!&ndash; Page Header &ndash;&gt;-->
+<!--{% if page.background %}-->
+<!--<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">-->
+<!--  {% else %}-->
+<!--  <header class="masthead">-->
+<!--    {% endif %}-->
+<!--    <div class="overlay"></div>-->
+<!--    <div class="container">-->
+<!--      <div class="row">-->
+<!--        <div class="col-lg-8 col-md-10 mx-auto">-->
+<!--          <div class="page-heading">-->
+<!--            <h1>{{ site.title }}</h1>-->
+<!--            {% if site.description %}-->
+<!--            <span class="subheading">{{ site.description }}</span>-->
+<!--            {% endif %}-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </header>-->
+<!--old stuff-->
+<!--  <div class="container">-->
+<!--    <div class="row">-->
+<!--      <div class="col-lg-8 col-md-10 mx-auto">-->
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+<!--        {{ content }} -->
+<!--        <h1 class="section-heading">We are hiring! Join us here by either clicking this <a href="https://join.com/companies/dunia">JOIN link</a> or use the buttons below to reach out to us on LinkedIn.-->
+<!--</h1>-->
 
-        {{ content }}
 
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
+<!--         Home Post List-->
+<!--        {% for post in site.posts limit : 5 %}-->
 
-        <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <h2 class="post-title">{{ post.title }}</h2>
-            {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-            {% else %}
-            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-            {% endif %}
-          </a>
-          <p class="post-meta">Posted by
-            {% if post.author %}
-            {{ post.author }}
-            {% else %}
-            {{ site.author }}
-            {% endif %}
-            on
-            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
-          </p>
-        </article>
+<!--        <article class="post-preview">-->
+<!--          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">-->
+<!--            <h2 class="post-title">{{ post.title }}</h2>-->
+<!--            {% if post.subtitle %}-->
+<!--            <h3 class="post-subtitle">{{ post.subtitle }}</h3>-->
+<!--            {% else %}-->
+<!--            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>-->
+<!--            {% endif %}-->
+<!--          </a>-->
+<!--          <p class="post-meta">Posted by-->
+<!--            {% if post.author %}-->
+<!--            {{ post.author }}-->
+<!--            {% else %}-->
+<!--            {{ site.author }}-->
+<!--            {% endif %}-->
+<!--            on-->
+<!--            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}-->
+<!--          </p>-->
+<!--        </article>-->
 
-        <hr>
+<!--        <hr>-->
 
-        {% endfor %}
+<!--        {% endfor %}-->
 
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
-        </div>
+<!--         Pager-->
+<!--        <div class="clearfix">-->
+<!--          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>-->
+<!--        </div>-->
 
-      </div>
-    </div>
-  </div>
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url('/img/di-main.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.0em;
+
+
+      }
+      header {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        text-align: center;
+      }
+      main {
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+
+
+      }
+      footer {
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 0px;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+      a {
+        color: blue;
+        text-decoration: none;
+      }
+      .apply-button { font-size: 1.2em; background-color: #0087FF; color: white; padding: 14px 20px; border-radius: 4px; text-decoration: none; text-align: center; display: inline-block; margin: 20px; }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 style="color:white ;font-size: 5.0em;">   </h1>
+    </header>
+    <main>
+      <h1 style="color:white ;font-size: 5.0em" >Dunia </h1>
+      <p style="color:white">Breakthrough materials for the net zero world of tomorrow.</p>
+      <a href="https://join.com/companies/dunia" class="apply-button">We're hiring</a>
+
+    </main>
+    <footer>
+      <p>Copyright © 2023 Dunia Innovations</p>
+      <p>
+        <a href="imprint.html">Privacy & Imprint</a>
+      </p>
+    </footer>
+  </body>
+</html>
